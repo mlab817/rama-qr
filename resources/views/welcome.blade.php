@@ -19,7 +19,7 @@
     <body class="antialiased">
         {!! QrCode::size(250)
             ->format('svg')
-            ->merge(\Illuminate\Support\Facades\Storage::get('/images/ltfrb.png'))
+            ->merge(public_path('images/ltfrb.png'), 0.1, true)
             ->errorCorrection('H')
             ->generate('nice one'); !!}
     </body>
