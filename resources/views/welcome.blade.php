@@ -19,7 +19,7 @@
     <body class="antialiased">
         {!! QrCode::size(250)
             ->format('svg')
-            ->mergeString(Storage::get('images/ltfrb.png'), 0.1, true)
+            ->mergeString(Storage::get('images/ltfrb.png'), 0.1)
             ->errorCorrection('H')
             ->generate('nice one'); !!}
     </body>
